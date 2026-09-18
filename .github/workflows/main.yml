@@ -1,4 +1,4 @@
-$TestResult = Test-NetConnection -ComputerName$env:TAILSCALE_IP -Port 3389
+$TestResult = Test-NetConnection -ComputerName $env:TAILSCALE_IP -Port 3389
 if (-not $TestResult.TcpTestSucceeded) {
     Write-Error "TCP connection to RDP port 3389 failed"
     exit 1
